@@ -1,0 +1,21 @@
+- hosts: web
+  remote_user: root
+  become: yes
+  vars:
+    packages:
+      - httpd 
+      - nano 
+      - mysql
+  tasks:
+  - name: Install Software
+    yum:
+      name: "{{ item }}"
+      state: installed
+    loop: "{{ packages }}"
+  - name: Remove Software
+    yum: 
+      name: 
+        - httpd 
+        - nano 
+        - mysql
+      state: removed

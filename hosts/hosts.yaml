@@ -1,0 +1,13 @@
+all:
+  hosts:
+    web.mydomain.local:
+  children:
+    customer1:
+      children:
+        db:
+          hosts:
+            db1.mydomain.local:
+            db2.mydomain.local:
+        web:
+          hosts:
+            web1.mydomain.local:

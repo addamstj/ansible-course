@@ -1,0 +1,6 @@
+roles:
+  - name: geerlingguy.docker
+  - src: https://github.com/companieshouse/ansible-role-apache
+    name: apache-ch
+collections:
+  - name: geerlingguy.k8s

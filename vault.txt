@@ -1,0 +1,8 @@
+Will need HashiCorp Vault
+
+You may run into issues - ask the FB Group and Check Google
+
+Mac Users: You will need to uninstall of ansible and use pip to reinstall
+
+Will need the hvac python module: pip install hvac
+

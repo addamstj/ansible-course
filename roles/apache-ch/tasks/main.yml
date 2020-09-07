@@ -1,0 +1,23 @@
+---
+
+- name: Create a user for apache
+  user:
+    name: "{{ apache_user }}"
+    state: present
+
+- name: Install apache and mod_perl
+  yum:
+    name: "httpd-{{ apache_version }}"
+    state: present
+
+- name: Install ModPerl
+  yum:
+    name: "mod_perl-{{ modperl_version }}"
+    state: present
+  when: install_modperl
+
+- name: Disable the 'main' apache
+  service:
+    name: httpd
+    state: stopped
+    enabled: no

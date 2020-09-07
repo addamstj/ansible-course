@@ -1,0 +1,14 @@
+- hosts: localhost
+  tasks:
+  - name: Create EC2 Instance
+    ec2_instance:
+      name: "EC2 From Ansible"
+      key_name: "ansible_key"
+      vpc_subnet_id: subnet-33f7f248
+      instance_type: t2.micro
+      security_group: ansible-SG
+      network:
+        assign_public_ip: true
+      image_id: ami-0a13d44dccf1f5cf6
+      tags:
+        Environment: course

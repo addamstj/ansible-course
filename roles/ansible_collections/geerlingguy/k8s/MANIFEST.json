@@ -1,0 +1,47 @@
+{
+ "collection_info": {
+  "namespace": "geerlingguy",
+  "name": "k8s",
+  "version": "0.10.0",
+  "authors": [
+   "geerlingguy (https://www.jeffgeerling.com/)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "kubernetes",
+   "k8s",
+   "infrastructure",
+   "cloud",
+   "containers",
+   "eks",
+   "aks",
+   "gke",
+   "digitalocean",
+   "docker",
+   "debian",
+   "redhat",
+   "ubuntu",
+   "amazon",
+   "linux",
+   "native"
+  ],
+  "description": "An elegant collection of Kuberenetes automation tools.",
+  "license": [
+   "MIT"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/geerlingguy/ansible-collection-k8s",
+  "documentation": "https://github.com/geerlingguy/ansible-collection-k8s",
+  "homepage": null,
+  "issues": "https://github.com/geerlingguy/ansible-collection-k8s/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "a58316b86ac6df72143ed495141cc7bbe5d3cb61df99b08effe87bed366ef9df",
+  "format": 1
+ },
+ "format": 1
+}

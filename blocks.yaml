@@ -1,0 +1,17 @@
+- hosts: localhost
+  #gather_facts: no
+  tasks:
+  - name: Error Handling
+    block:
+      - name: Going to Fail 
+        debug: 
+          msg: "Running the module"
+      - name: Spanner
+        command: /bin/hsab
+      - name: Never Runs
+        debug:
+          msg: "This Never Runs!"
+    rescue:
+      - name: "Something went wrong..."
+        debug: 
+          msg: "The error was caught"

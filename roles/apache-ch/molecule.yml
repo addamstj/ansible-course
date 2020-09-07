@@ -1,0 +1,16 @@
+---
+
+driver:
+  name: docker
+
+ansible:
+  playbook: tests/test.yml
+
+docker:
+  containers:
+    - name: apache_centos6
+      image: centos
+      image_version: 6
+      privileged: true
+      ansible_groups:
+        - all

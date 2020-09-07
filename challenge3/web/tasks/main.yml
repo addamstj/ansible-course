@@ -1,0 +1,8 @@
+---
+# tasks file for web
+- name: Install Apache
+  yum:
+    name: httpd
+    state: installed
+  notify:
+    - Start Web

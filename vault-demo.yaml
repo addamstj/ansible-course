@@ -1,0 +1,13 @@
+- hosts: localhost
+  vars:
+    vault_token: 'TOKEN'
+    vault_url: 'http://127.0.0.1:8200'
+    db_password: "{{ lookup('hashi_vault', 'secret=secret/passwords/db:data token={{ vault_token }} url={{ vault_url }}') }}"
+    system_password: "{{ lookup('hashi_vault', 'secret=secret/passwords/system:data token={{ vault_token }} url={{ vault_url }}') }}"
+  tasks:
+  - name: Value For db_password
+    debug:
+      msg: "db_password: {{ db_password }}"
+  - name: Value For system_password
+    debug:
+      msg: "db_password: {{ system_password }}"

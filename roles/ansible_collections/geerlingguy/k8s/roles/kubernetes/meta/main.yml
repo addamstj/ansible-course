@@ -1,0 +1,33 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: geerlingguy
+  description: Kubernetes for Linux.
+  company: "Midwestern Mac, LLC"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.4
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+  galaxy_tags:
+    - system
+    - containers
+    - docker
+    - rkt
+    - orchestration
+    - kubernetes
+    - k8s
+    - paas
+    - saas
+    - hosting

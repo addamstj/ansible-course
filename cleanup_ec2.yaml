@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+  - name: Delete EC2 Instance
+    ec2_instance:
+      name: "EC2 From Ansible"
+      state: terminated

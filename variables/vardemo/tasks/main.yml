@@ -1,0 +1,5 @@
+---
+# tasks file for vardemo
+- name: Display Value
+  debug:
+    msg: "{{ basic_var }}"

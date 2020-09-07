@@ -1,0 +1,10 @@
+all:
+  hosts:
+    windows:
+      ansible_host: ec2-18-132-47-61.eu-west-2.compute.amazonaws.com
+      ansible_user: administrator
+      ansible_password: PASSWORD
+      ansible_port: 5986
+      ansible_connection: winrm
+      ansible_winrm_scheme: https
+      ansible_winrm_server_cert_validation: ignore

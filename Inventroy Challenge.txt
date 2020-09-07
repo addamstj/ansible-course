@@ -1,0 +1,16 @@
+Inventory Challenge
+
+	1.	Create 3 Individual Hosts:
+	⁃	mail.mycorp.local
+	⁃	smtp.mycorp.local
+	⁃	auth.mycorp.local
+	2.	Group the Domain Controllers:
+	⁃	dc01.mycorp.local
+	⁃	dc02.mycorp.local
+	3.	Group the London App servers:
+	⁃	app01.ldn.mycorp.local
+	⁃	app02.lnd.mycorp.local
+	4.	Group the Texas App Servers:
+	⁃	app03.tx.mycorp.local
+	⁃	app04.tx.mycorp.local
+	5.	Group the London and Texas servers in a single group called: itlappsrv

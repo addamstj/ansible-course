@@ -1,0 +1,5 @@
+- hosts: web
+  remote_user: root
+  become: yes
+  roles:
+    - web

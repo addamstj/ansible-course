@@ -1,0 +1,32 @@
+- hosts: web
+  remote_user: root
+  become: yes
+  tasks:
+  - name: Update All Packages
+    yum:
+      name: '*'
+      state: latest
+  - name: Install Apache
+    yum: 
+      name: httpd
+      state: installed
+  - name: Create The HTML File
+    shell: echo "Hello From The Ansible Challenge" > /var/www/html/index.html
+    args:
+      executable: /bin/bash
+    notify:
+      - Reload Apache
+  - name: Public IP
+    shell:
+      cmd: curl http://169.254.169.254/latest/meta-data/public-ipv4
+    register: curl
+  - debug: var=curl.stdout_lines
+  - name: Uninstall Apache
+    yum: 
+      name: httpd
+      state: removed
+  handlers:
+    - name: Reload Apache
+      service:
+        name: httpd
+        state: reloaded

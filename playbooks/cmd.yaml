@@ -1,0 +1,9 @@
+- hosts: web
+  remote_user: root
+  become: yes
+  tasks:
+    - name: Curl AWS
+      shell: 
+        cmd: curl http://169.254.169.254/latest/meta-data/public-ipv4
+      register: curl
+    - debug: var=curl.stdout_lines
